@@ -62,3 +62,4 @@ echo "zeroone-cli mnsync status"
 echo "Once you see AssetID: 999, you can then Start Alias in the windows wallet."
 sleep 3
 echo "Good luck! You got this!!"
+zerooned -version
