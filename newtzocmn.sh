@@ -13,10 +13,11 @@ sleep 10
 MKEY=$(./zeroone-cli masternode genkey)
 ./zeroone-cli stop
 echo -e "masternode=1\nmasternodeprivkey=$MKEY\n\n" >> /$HOME/.zeroonecore/zeroone.conf
-sleep 2
+sleep 60
 ./zerooned --daemon --datadir=$HOME/.zeroonecore
 sleep 60
 ./zeroone-cli mnsync status
 echo " "
+THISHOST=$(hostname -f)
 echo "For windows wallet masternode.conf:"
-echo "MN1 $EXIP:10001 $MKEY TXID VOUT"
+echo "$THISHOST $EXIP:10001 $MKEY TXID VOUT"
