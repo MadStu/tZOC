@@ -19,7 +19,7 @@ mv zeroonecore-0.12.1/bin/zeroone-cli ~/zeroone/zeroone-cli
 
 mkdir ~/.zeroonecore
 EXIP=$(curl ipinfo.io/ip)
-printf "rpcuser=yesme\nrpcpassword=f5hanfsdfia\nrpcallowip=127.0.0.1\nlisten=1\nserver=1\ndeamon=1\nlogtimestamps=1\nmaxconnections=64\ntestnet=1\ngen=0\n\nexternalip=$EXIP\nbind=$EXIP:10001\n\naddnode=01coin.io\n\n" > ~/.zeroonecore/zeroone.conf
+printf "rpcuser=yesme\nrpcpassword=f5hanfsdfia\nrpcallowip=127.0.0.1\nlisten=1\nserver=1\ndeamon=1\nlogtimestamps=1\nmaxconnections=64\ntestnet=1\ngen=0\n\nexternalip=$EXIP\nbind=$EXIP:10001\n\naddnode=94.177.164.250\naddnode=80.211.155.189\naddnode=209.250.225.136\naddnode=94.215.45.100\naddnode=80.211.27.241\n\n" > ~/.zeroonecore/zeroone.conf
 ~/zeroone/zerooned -daemon
 sleep 10
 MKEY=$(~/zeroone/zeroone-cli masternode genkey)
