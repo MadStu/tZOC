@@ -7,12 +7,14 @@ else
 
 #sudo apt-get install jq -y
 
-killall zerooned
+#killall zerooned
 rm -rf zero*
 rm -rf .zero*
-wget https://github.com/zocteam/zeroonecoin/releases/download/V0.12.1.6/zeroone-linux.tar.gz
-tar -xvzf zeroone-linux.tar.gz
-
+wget https://github.com/MadStu/tZOC/raw/master/zeroonecore-0.12.1-linux64.tar.gz
+tar -xvzf zeroonecore-0.12.1-linux64.tar.gz
+mkdir ~/zeroone
+mv zeroonecore-0.12.1/bin/zerooned ~/zeroone/zerooned
+mv zeroonecore-0.12.1/bin/zeroone-cli ~/zeroone/zeroone-cli
 
 
 mkdir ~/.zeroonecore
